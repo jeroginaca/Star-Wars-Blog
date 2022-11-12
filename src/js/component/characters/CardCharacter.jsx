@@ -35,6 +35,7 @@ const CardCharacter = () => {
         setLike (!like);
     }
 
+
    /* useEffect(() => {
         if (like) {
             actions.addFavorites(people.name)
@@ -61,11 +62,10 @@ const CardCharacter = () => {
                         <p className="card-text">Eye-Color: {people.eye_color}</p>
                         <div className="d-flex justify-content-between mx-3">
                             <Link to={`/characters/${index+1}`}className="btn btn-outline-primary">Learn More</Link>
-                            <button className="btn btn-outline-warning" onClick={() => {handleClick
+                            <button className="btn btn-outline-warning" onClick={() => {
                                 actions.addFavorites(people.name)} } >
                                  <i  className={`${like ? "fa-regular fa-heart-fill" : "fa-regular fa-heart"}`}></i> 
                                 </button>
-                            <button  className={`btn btn-primary ${like ? "fa-regular fa-heart" : "fa-regular fa-heart-fill"}`}></button>
                         </div>
                     </div>
                 </div>

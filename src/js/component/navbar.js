@@ -27,14 +27,15 @@ const Navbar = () => {
 				
 				
 				<div className="dropdown">
-					<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
 						Favourites
 					</button>
 					
 					<ul className="dropdown-menu">
 					{store.favorites.map((fav) => 
 						<li><a className="dropdown-item" href="#">
-							{fav}
+							{fav} <i class="fa-solid fa-trash" onClick={() => {
+                                actions.removeFavorites(fav)} }></i>
 							</a></li>
 					)}
 					</ul>
