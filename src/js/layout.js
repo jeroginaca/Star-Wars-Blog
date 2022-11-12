@@ -7,17 +7,21 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 
-//create your first component
+import  Navbar  from "./component/navbar";
+import { Footer } from "./component/footer";
+import CharacterDetail from "./component/characters/CardDetail.jsx";
+import PlanetDetail from "./component/characters/CardDetailPlanets.jsx";
+import VehicleDetail from "./component/characters/CardDetailVehicles.jsx";
+
+
 const Layout = () => {
-	//the basename is used when your project is published in a subdirectory and not in the root of the domain
-	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
+	
 	const basename = process.env.BASENAME || "";
 
 	return (
 		<div>
+		
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -28,8 +32,14 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/characters/:id">
+							<CharacterDetail />
+						</Route>
+						<Route exact path="/planets/:id">
+							<PlanetDetail />
+						</Route>
+						<Route exact path="/vehicles/:id">
+							<VehicleDetail />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
@@ -38,6 +48,7 @@ const Layout = () => {
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
+		
 		</div>
 	);
 };

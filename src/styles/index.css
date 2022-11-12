@@ -1,3 +1,52 @@
 /* 
     General Styles
 */
+
+.carrousel{
+    object-fit: cover;
+    overflow: scroll;
+    display: flex;
+
+}
+
+.card-Character{
+ 
+}
+
+.options{
+    
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+.h1-reveal{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.h1-reveal:hover{
+    color: rgb(109, 109, 109); 
+}
+
+.desc-lead{
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.desc-text{
+    margin-left: 4rem;
+}
+
+.red-desc{
+    margin: 0 auto;
+    width: 70%;
+    border-top: 1px solid red;
+    color: red;
+}
